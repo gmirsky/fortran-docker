@@ -1,6 +1,6 @@
 #!/bin/bash
 echo "running fortran"
-./FortranRPW
+time ./FortranRPW
 echo "fortran complete"
 echo "printing output file"
 cat /data/FortranDataOutput.txt
