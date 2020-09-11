@@ -1,15 +1,20 @@
 # Fortran Docker Container
 
-Docker Container to encapsulate legacy fortran code and to run it.
+## Description
+
+Sample Docker Container to encapsulate legacy Fortran code.
 
 ### Build the container
 
-```
+```bash
 docker build -t fortranrpw .
 ```
 
 ### Run the container
 
-```
+```bash
 docker run -v  /myLocalDirectory:/data fortranrpw
 ```
+
+
+
