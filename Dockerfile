@@ -9,7 +9,10 @@ RUN yum update -y && \
 COPY Makefile run_fortran.sh FortranRPW.f90  /fortran/
 
 WORKDIR /fortran/
-RUN make FortranRPW
+RUN make FortranRPW && \
+    rm *.f90 && \
+    rm *.o && \
+    yum remove -y gcc-gfortran gdb make
 
 # configure the container to run the hello world executable by default
 ENTRYPOINT ["./run_fortran.sh"]
